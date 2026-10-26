@@ -1,0 +1,25 @@
+[package]
+name = "hermes-claw"
+version = "0.1.0"
+edition = "2021"
+description = "Fast, powerful AI connector and system agent bridge."
+
+[dependencies]
+tokio = { version = "1.38", features = ["full"] }
+axum = { version = "0.7", features = ["ws", "macros"] }
+tower-http = { version = "0.5", features = ["cors", "fs", "trace"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.12", features = ["json", "stream"] }
+futures-util = "0.3"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+sysinfo = "0.30"
+clap = { version = "4.5", features = ["derive"] }
+async-trait = "0.1"
+dotenvy = "0.15"
+tokio-stream = "0.1"
+chrono = { version = "0.4", features = ["serde"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
